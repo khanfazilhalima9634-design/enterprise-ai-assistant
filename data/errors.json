@@ -1,0 +1,266 @@
+[
+  {
+    "code": "400",
+    "software": "general",
+    "title": "HTTP 400 Bad Request",
+    "meaning": "The server cannot process the request because the request is invalid or malformed.",
+    "causes": [
+      "Invalid parameters",
+      "Malformed JSON",
+      "Missing required fields"
+    ],
+    "quickFix": "Inspect the request payload, parameter names, required fields, and content type.",
+    "details": [
+      "Compare the request with the service's current API contract.",
+      "Validate JSON syntax and required fields.",
+      "Check whether a parameter uses the correct data type."
+    ],
+    "prevention": "Validate requests before sending and keep API contracts versioned."
+  },
+  {
+    "code": "401",
+    "software": "general",
+    "title": "HTTP 401 Unauthorized",
+    "meaning": "The request lacks valid authentication credentials or the credentials are not accepted.",
+    "causes": [
+      "Missing token",
+      "Expired credential",
+      "Wrong authentication scheme"
+    ],
+    "quickFix": "Verify the authentication method and obtain a fresh approved credential.",
+    "details": [
+      "Confirm the endpoint and authentication flow.",
+      "Check token expiry and audience metadata without exposing the token.",
+      "Review identity-provider logs when available."
+    ],
+    "prevention": "Use secure credential storage and controlled rotation."
+  },
+  {
+    "code": "403",
+    "software": "general",
+    "title": "HTTP 403 Forbidden",
+    "meaning": "The request is understood but access to the resource or operation is not permitted.",
+    "causes": [
+      "Insufficient permissions",
+      "Policy restriction",
+      "Resource ACL"
+    ],
+    "quickFix": "Identify the effective identity and required permission before changing access.",
+    "details": [
+      "Check role assignments and resource policies.",
+      "Look for explicit deny or organizational policy.",
+      "Grant only the minimum permission required."
+    ],
+    "prevention": "Use least privilege and periodic access reviews."
+  },
+  {
+    "code": "404",
+    "software": "general",
+    "title": "HTTP 404 Not Found",
+    "meaning": "The requested resource or endpoint could not be found.",
+    "causes": [
+      "Wrong URL",
+      "Deleted resource",
+      "Incorrect environment"
+    ],
+    "quickFix": "Verify the endpoint, resource identifier, API version, and environment.",
+    "details": [
+      "Compare the URL with current documentation.",
+      "Check whether the resource exists in the selected account or subscription.",
+      "Confirm path parameters."
+    ],
+    "prevention": "Use environment-aware configuration and endpoint tests."
+  },
+  {
+    "code": "408",
+    "software": "general",
+    "title": "HTTP 408 Request Timeout",
+    "meaning": "The server did not receive a complete request within the allowed time.",
+    "causes": [
+      "Slow network",
+      "Client timeout",
+      "Server-side delay"
+    ],
+    "quickFix": "Retry safely and investigate network and service latency.",
+    "details": [
+      "Check whether the problem is intermittent.",
+      "Review client and server timeout settings.",
+      "Avoid repeated retries for non-idempotent operations without safeguards."
+    ],
+    "prevention": "Use appropriate timeouts and controlled retry strategies."
+  },
+  {
+    "code": "429",
+    "software": "general",
+    "title": "HTTP 429 Too Many Requests",
+    "meaning": "The client has sent requests faster than the service currently allows.",
+    "causes": [
+      "Rate limit",
+      "Traffic spike",
+      "Retry loop"
+    ],
+    "quickFix": "Respect Retry-After when provided and use exponential backoff.",
+    "details": [
+      "Reduce request frequency.",
+      "Cache safe responses where appropriate.",
+      "Review client retry logic."
+    ],
+    "prevention": "Implement rate-aware clients, caching, and backoff."
+  },
+  {
+    "code": "500",
+    "software": "general",
+    "title": "HTTP 500 Internal Server Error",
+    "meaning": "The server encountered an unexpected condition while processing the request.",
+    "causes": [
+      "Application exception",
+      "Dependency failure",
+      "Configuration issue"
+    ],
+    "quickFix": "Retry if the operation is safe, then inspect service logs or status information.",
+    "details": [
+      "Capture request IDs and timestamps.",
+      "Check dependency health.",
+      "Review recent deployments or configuration changes."
+    ],
+    "prevention": "Monitoring, testing, controlled deployments, and resilient dependency handling."
+  },
+  {
+    "code": "502",
+    "software": "general",
+    "title": "HTTP 502 Bad Gateway",
+    "meaning": "A gateway or proxy received an invalid response from an upstream service.",
+    "causes": [
+      "Upstream outage",
+      "Proxy issue",
+      "Network failure"
+    ],
+    "quickFix": "Check service health and retry safely if appropriate.",
+    "details": [
+      "Determine whether the error is isolated or widespread.",
+      "Inspect proxy and upstream logs when available.",
+      "Check DNS and network connectivity."
+    ],
+    "prevention": "Monitor upstream dependencies and configure resilient gateways."
+  },
+  {
+    "code": "503",
+    "software": "general",
+    "title": "HTTP 503 Service Unavailable",
+    "meaning": "The service is temporarily unable to handle the request.",
+    "causes": [
+      "Maintenance",
+      "Overload",
+      "Dependency outage"
+    ],
+    "quickFix": "Check service status and retry using controlled backoff.",
+    "details": [
+      "Look for maintenance notifications.",
+      "Check capacity and dependency health.",
+      "Avoid aggressive retries that increase load."
+    ],
+    "prevention": "Capacity planning, health checks, and graceful degradation."
+  },
+  {
+    "code": "504",
+    "software": "general",
+    "title": "HTTP 504 Gateway Timeout",
+    "meaning": "A gateway did not receive a timely response from an upstream service.",
+    "causes": [
+      "Upstream latency",
+      "Network issue",
+      "Overloaded service"
+    ],
+    "quickFix": "Check upstream latency and retry safely where supported.",
+    "details": [
+      "Measure request duration.",
+      "Check gateway and upstream logs.",
+      "Review timeouts across the request chain."
+    ],
+    "prevention": "Performance monitoring and appropriate timeout/retry design."
+  },
+  {
+    "code": "403",
+    "software": "azure",
+    "title": "Azure 403 Forbidden",
+    "meaning": "Azure received the request but the identity or policy is not permitted to perform the operation.",
+    "causes": [
+      "Missing role",
+      "Azure Policy",
+      "Network restriction"
+    ],
+    "quickFix": "Review the effective identity, role assignments, resource policies, and network restrictions.",
+    "details": [
+      "Confirm subscription and resource context.",
+      "Check for explicit denies and organizational policy.",
+      "Use least privilege when correcting access."
+    ],
+    "prevention": "Centralized RBAC governance and regular access reviews."
+  },
+  {
+    "code": "401",
+    "software": "azure",
+    "title": "Azure 401 Unauthorized",
+    "meaning": "An Azure API or service endpoint rejected the authentication information.",
+    "causes": [
+      "Expired token",
+      "Wrong audience",
+      "Invalid credential"
+    ],
+    "quickFix": "Acquire a fresh credential through the approved authentication flow and verify endpoint context.",
+    "details": [
+      "Check issuer, audience, expiry, tenant, and requested scope without exposing secrets.",
+      "Review application registration configuration."
+    ],
+    "prevention": "Managed identities and secure secret management where supported."
+  },
+  {
+    "code": "AUTH",
+    "software": "salesforce",
+    "title": "Salesforce API Authentication Error",
+    "meaning": "A Salesforce integration cannot authenticate successfully.",
+    "causes": [
+      "Expired token",
+      "Connected app policy",
+      "Wrong environment"
+    ],
+    "quickFix": "Verify the integration environment and authentication configuration without exposing credentials.",
+    "details": [
+      "Review OAuth flow, connected-app policies, user permissions, and integration logs."
+    ],
+    "prevention": "Managed secrets and controlled token rotation."
+  },
+  {
+    "code": "GATEWAY",
+    "software": "power-bi",
+    "title": "Power BI Gateway Connection Error",
+    "meaning": "Power BI Service cannot reach or use the configured data gateway.",
+    "causes": [
+      "Gateway offline",
+      "Network restriction",
+      "Data source mapping"
+    ],
+    "quickFix": "Check gateway status, host availability, mappings, and credentials.",
+    "details": [
+      "Review gateway cluster status and relevant logs.",
+      "Validate source connectivity from the gateway host."
+    ],
+    "prevention": "Gateway monitoring and documented maintenance."
+  },
+  {
+    "code": "AUTOMATION",
+    "software": "jira",
+    "title": "Jira Automation Rule Not Triggering",
+    "meaning": "A Jira automation rule did not execute for the expected event.",
+    "causes": [
+      "Trigger mismatch",
+      "Rule disabled",
+      "Condition or scope mismatch"
+    ],
+    "quickFix": "Review the automation audit log and verify trigger, scope, and conditions.",
+    "details": [
+      "Test with a controlled issue and inspect where execution stops."
+    ],
+    "prevention": "Keep automation rules small and test changes before rollout."
+  }
+]

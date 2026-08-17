@@ -1,0 +1,202 @@
+[
+  {
+    "id": "power-bi",
+    "name": "Microsoft Power BI",
+    "category": "Analytics",
+    "platform": "Cloud & Desktop",
+    "description": "Business intelligence and data visualization platform for building interactive reports, dashboards, and analytics.",
+    "officialUrl": "https://powerbi.microsoft.com/",
+    "tutorials": 4,
+    "troubleshooting": 3
+  },
+  {
+    "id": "microsoft-teams",
+    "name": "Microsoft Teams",
+    "category": "Collaboration",
+    "platform": "Cloud & Desktop",
+    "description": "Enterprise collaboration platform for chat, meetings, calling, and teamwork.",
+    "officialUrl": "https://www.microsoft.com/microsoft-teams/",
+    "tutorials": 3,
+    "troubleshooting": 2
+  },
+  {
+    "id": "azure",
+    "name": "Microsoft Azure",
+    "category": "Cloud",
+    "platform": "Cloud",
+    "description": "Cloud platform for compute, storage, networking, databases, AI, and application services.",
+    "officialUrl": "https://azure.microsoft.com/",
+    "tutorials": 3,
+    "troubleshooting": 3
+  },
+  {
+    "id": "microsoft-365",
+    "name": "Microsoft 365",
+    "category": "Productivity",
+    "platform": "Cloud & Desktop",
+    "description": "Cloud productivity suite including Microsoft 365 apps, identity, collaboration, and administration.",
+    "officialUrl": "https://www.microsoft.com/microsoft-365/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "category": "CRM",
+    "platform": "Cloud",
+    "description": "Customer relationship management platform for sales, service, marketing, and enterprise workflows.",
+    "officialUrl": "https://www.salesforce.com/",
+    "tutorials": 4,
+    "troubleshooting": 3
+  },
+  {
+    "id": "jira",
+    "name": "Jira",
+    "category": "Project Management",
+    "platform": "Cloud & Server",
+    "description": "Work management platform for software development, agile planning, issue tracking, and workflows.",
+    "officialUrl": "https://www.atlassian.com/software/jira",
+    "tutorials": 3,
+    "troubleshooting": 3
+  },
+  {
+    "id": "servicenow",
+    "name": "ServiceNow",
+    "category": "ITSM",
+    "platform": "Cloud",
+    "description": "Enterprise workflow platform for IT service management, operations, and business workflows.",
+    "officialUrl": "https://www.servicenow.com/",
+    "tutorials": 3,
+    "troubleshooting": 2
+  },
+  {
+    "id": "aws",
+    "name": "Amazon Web Services",
+    "category": "Cloud",
+    "platform": "Cloud",
+    "description": "Cloud infrastructure platform covering compute, storage, databases, networking, security, and AI.",
+    "officialUrl": "https://aws.amazon.com/",
+    "tutorials": 3,
+    "troubleshooting": 3
+  },
+  {
+    "id": "google-cloud",
+    "name": "Google Cloud",
+    "category": "Cloud",
+    "platform": "Cloud",
+    "description": "Cloud platform for infrastructure, data analytics, machine learning, and application services.",
+    "officialUrl": "https://cloud.google.com/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "tableau",
+    "name": "Tableau",
+    "category": "Analytics",
+    "platform": "Cloud & Desktop",
+    "description": "Analytics and visualization platform for exploring data and sharing interactive dashboards.",
+    "officialUrl": "https://www.tableau.com/",
+    "tutorials": 3,
+    "troubleshooting": 2
+  },
+  {
+    "id": "snowflake",
+    "name": "Snowflake",
+    "category": "Data",
+    "platform": "Cloud",
+    "description": "Cloud data platform for analytics, data engineering, sharing, and AI workloads.",
+    "officialUrl": "https://www.snowflake.com/",
+    "tutorials": 3,
+    "troubleshooting": 2
+  },
+  {
+    "id": "databricks",
+    "name": "Databricks",
+    "category": "Data",
+    "platform": "Cloud",
+    "description": "Data and AI platform combining data engineering, analytics, machine learning, and governance.",
+    "officialUrl": "https://www.databricks.com/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "category": "CRM",
+    "platform": "Cloud",
+    "description": "Customer platform for CRM, marketing, sales, service, content, and automation.",
+    "officialUrl": "https://www.hubspot.com/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "dynamics-365",
+    "name": "Microsoft Dynamics 365",
+    "category": "CRM & ERP",
+    "platform": "Cloud",
+    "description": "Suite of business applications for CRM, finance, supply chain, customer service, and operations.",
+    "officialUrl": "https://www.microsoft.com/dynamics-365",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "sap-s4hana",
+    "name": "SAP S/4HANA",
+    "category": "ERP",
+    "platform": "Cloud & Enterprise",
+    "description": "Enterprise ERP platform for finance, supply chain, manufacturing, procurement, and business operations.",
+    "officialUrl": "https://www.sap.com/products/erp/s4hana.html",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "oracle-erp",
+    "name": "Oracle Fusion Cloud ERP",
+    "category": "ERP",
+    "platform": "Cloud",
+    "description": "Cloud ERP suite for finance, procurement, project management, risk, and enterprise operations.",
+    "officialUrl": "https://www.oracle.com/erp/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "net-suite",
+    "name": "Oracle NetSuite",
+    "category": "ERP",
+    "platform": "Cloud",
+    "description": "Cloud business management suite covering ERP, financials, CRM, and commerce.",
+    "officialUrl": "https://www.netsuite.com/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "category": "Collaboration",
+    "platform": "Cloud & Desktop",
+    "description": "Business communication platform with channels, messaging, workflows, and integrations.",
+    "officialUrl": "https://slack.com/",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "github-enterprise",
+    "name": "GitHub Enterprise",
+    "category": "Development",
+    "platform": "Cloud & Enterprise",
+    "description": "Enterprise developer platform for source control, collaboration, automation, and secure software delivery.",
+    "officialUrl": "https://github.com/enterprise",
+    "tutorials": 2,
+    "troubleshooting": 2
+  },
+  {
+    "id": "azure-devops",
+    "name": "Azure DevOps",
+    "category": "Development",
+    "platform": "Cloud & Enterprise",
+    "description": "Developer services for planning, source control, CI/CD, testing, and package management.",
+    "officialUrl": "https://azure.microsoft.com/products/devops",
+    "tutorials": 2,
+    "troubleshooting": 2
+  }
+]

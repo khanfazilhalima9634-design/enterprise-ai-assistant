@@ -1,0 +1,140 @@
+[
+  {
+    "slug": "power-bi-data-analyst",
+    "title": "Power BI Beginner \u2192 Data Analyst",
+    "level": "Beginner to Intermediate",
+    "duration": "8 weeks",
+    "modules": [
+      "Data fundamentals",
+      "Power Query",
+      "Data modeling",
+      "DAX fundamentals",
+      "Report design",
+      "Dashboard storytelling",
+      "Power BI Service",
+      "Portfolio project"
+    ],
+    "tasks": [
+      "Import a dataset",
+      "Clean and transform data",
+      "Build a star schema",
+      "Create KPI measures",
+      "Build an interactive dashboard"
+    ]
+  },
+  {
+    "slug": "salesforce-administrator",
+    "title": "Salesforce Administrator Foundations",
+    "level": "Beginner to Intermediate",
+    "duration": "8 weeks",
+    "modules": [
+      "CRM fundamentals",
+      "Objects and fields",
+      "Security model",
+      "Reports and dashboards",
+      "Automation",
+      "Data management",
+      "Testing and deployment",
+      "Admin project"
+    ],
+    "tasks": [
+      "Create a report",
+      "Configure a dashboard",
+      "Map user permissions",
+      "Build a basic automation",
+      "Document a business process"
+    ]
+  },
+  {
+    "slug": "azure-cloud-fundamentals",
+    "title": "Azure Cloud Fundamentals",
+    "level": "Beginner",
+    "duration": "6 weeks",
+    "modules": [
+      "Cloud concepts",
+      "Azure core services",
+      "Identity",
+      "Networking",
+      "Storage",
+      "Monitoring",
+      "Security basics",
+      "Hands-on project"
+    ],
+    "tasks": [
+      "Create a resource group",
+      "Configure storage",
+      "Review RBAC",
+      "Deploy a test service",
+      "Inspect monitoring data"
+    ]
+  },
+  {
+    "slug": "jira-administrator",
+    "title": "Jira Administrator Foundations",
+    "level": "Beginner to Intermediate",
+    "duration": "6 weeks",
+    "modules": [
+      "Projects",
+      "Issue types",
+      "Workflows",
+      "Permissions",
+      "Automation",
+      "Dashboards",
+      "Service operations",
+      "Admin project"
+    ],
+    "tasks": [
+      "Create a project",
+      "Design a workflow",
+      "Configure permissions",
+      "Create automation",
+      "Build a dashboard"
+    ]
+  },
+  {
+    "slug": "aws-cloud-beginner",
+    "title": "AWS Cloud Beginner",
+    "level": "Beginner",
+    "duration": "8 weeks",
+    "modules": [
+      "Cloud concepts",
+      "IAM",
+      "EC2",
+      "S3",
+      "Networking",
+      "Databases",
+      "Monitoring",
+      "Security"
+    ],
+    "tasks": [
+      "Create an IAM role",
+      "Configure a test bucket",
+      "Launch a sandbox workload",
+      "Review CloudTrail",
+      "Apply least privilege"
+    ]
+  },
+  {
+    "slug": "service-management-foundations",
+    "title": "ServiceNow Service Management Foundations",
+    "level": "Beginner",
+    "duration": "6 weeks",
+    "modules": [
+      "ITSM concepts",
+      "Incidents",
+      "Requests",
+      "Knowledge",
+      "Workflows",
+      "Reporting",
+      "Automation",
+      "Service project"
+    ],
+    "tasks": [
+      "Create an incident process",
+      "Configure a simple flow",
+      "Create a report",
+      "Document a knowledge article",
+      "Test a workflow"
+    ]
+  }
+]

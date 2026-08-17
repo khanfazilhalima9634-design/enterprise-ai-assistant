@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "power-bi-refresh-failed",
+    "software": "power-bi",
+    "title": "Power BI Refresh Failed",
+    "problem": "A Power BI dataset or report refresh does not complete successfully.",
+    "symptoms": [
+      "Refresh history shows Failed.",
+      "Visuals may continue showing older data.",
+      "The failure can appear only in Power BI Service even when Desktop refresh works."
+    ],
+    "causes": [
+      "Expired or incorrect credentials.",
+      "Gateway unavailable or offline.",
+      "Source schema or path changed.",
+      "Query transformation error.",
+      "Network or source availability issue."
+    ],
+    "quickFix": [
+      "Open refresh history and inspect the exact failure message.",
+      "Validate source credentials.",
+      "Check gateway status if an on-premises source is involved.",
+      "Test the query against the current source schema."
+    ],
+    "detailedFix": [
+      "Confirm the data source is reachable from the environment performing the refresh.",
+      "Re-authenticate the source using the approved organizational method.",
+      "Review gateway mapping and service status.",
+      "Open the report in Desktop and refresh locally to isolate query problems.",
+      "Republish only after validating the corrected model."
+    ],
+    "diagnostics": [
+      "Compare the last successful refresh with the first failed run.",
+      "Check whether the failure affects one source or the whole model.",
+      "Review gateway logs when permitted by the administrator."
+    ],
+    "prevention": "Document source ownership, credential rotation procedures, gateway dependencies, and refresh schedules.",
+    "related": [
+      "power-bi-gateway-unavailable"
+    ]
+  },
+  {
+    "slug": "power-bi-gateway-unavailable",
+    "software": "power-bi",
+    "title": "Power BI Gateway Unavailable",
+    "problem": "Power BI Service cannot reach a configured on-premises data gateway.",
+    "symptoms": [
+      "Refresh fails with gateway-related messaging.",
+      "The gateway may appear offline or unavailable.",
+      "Other datasets using the same gateway can also fail."
+    ],
+    "causes": [
+      "Gateway service stopped.",
+      "Host machine offline.",
+      "Network restriction.",
+      "Gateway version or configuration issue.",
+      "Service account problem."
+    ],
+    "quickFix": [
+      "Check gateway status in the Power BI Service.",
+      "Verify the gateway host is online.",
+      "Confirm the gateway service is running.",
+      "Check recent network or policy changes."
+    ],
+    "detailedFix": [
+      "Verify the gateway cluster members and service health.",
+      "Review network connectivity from the gateway host.",
+      "Confirm data source mappings and credentials.",
+      "Update the gateway according to the organization's change process."
+    ],
+    "diagnostics": [
+      "Check whether multiple datasets are affected.",
+      "Review gateway event logs with administrator access.",
+      "Compare the outage time with infrastructure changes."
+    ],
+    "prevention": "Monitor gateway health and maintain documented ownership and update procedures.",
+    "related": [
+      "power-bi-refresh-failed"
+    ]
+  },
+  {
+    "slug": "salesforce-login-problem",
+    "software": "salesforce",
+    "title": "Salesforce Login Problem",
+    "problem": "A user cannot sign in to Salesforce.",
+    "symptoms": [
+      "Login is rejected.",
+      "MFA or identity provider prompts may fail.",
+      "The issue may affect one user or a wider group."
+    ],
+    "causes": [
+      "Incorrect credentials.",
+      "Identity-provider issue.",
+      "MFA problem.",
+      "Profile or login policy restriction.",
+      "Service outage."
+    ],
+    "quickFix": [
+      "Verify the username and approved sign-in method.",
+      "Check the organization's identity provider status.",
+      "Confirm MFA is working.",
+      "Try the approved alternate login path if available."
+    ],
+    "detailedFix": [
+      "Determine whether other users are affected.",
+      "Check login history when administrator access is available.",
+      "Review profile, permission set, IP range, and login-hour restrictions.",
+      "Escalate identity-provider issues to the appropriate administrator."
+    ],
+    "diagnostics": [
+      "Capture the exact error text without sharing passwords or tokens.",
+      "Check whether the problem is browser-specific.",
+      "Review recent identity or security-policy changes."
+    ],
+    "prevention": "Maintain documented identity-provider ownership and recovery procedures.",
+    "related": []
+  },
+  {
+    "slug": "salesforce-api-authentication-failure",
+    "software": "salesforce",
+    "title": "Salesforce API Authentication Failure",
+    "problem": "An integration cannot authenticate to Salesforce.",
+    "symptoms": [
+      "API requests return authentication errors.",
+      "Tokens may be rejected or expired.",
+      "The problem may begin after a security-policy change."
+    ],
+    "causes": [
+      "Expired credentials or token.",
+      "Connected-app policy change.",
+      "Wrong endpoint or environment.",
+      "User permission change.",
+      "Network or identity-provider issue."
+    ],
+    "quickFix": [
+      "Verify the environment and endpoint.",
+      "Check the integration's authentication configuration without exposing secrets.",
+      "Review connected-app and user permissions.",
+      "Rotate credentials through the approved secret-management process."
+    ],
+    "detailedFix": [
+      "Confirm the integration is using the correct OAuth flow.",
+      "Validate connected-app policies.",
+      "Check user permissions and session/security restrictions.",
+      "Review integration logs for status codes and request IDs."
+    ],
+    "diagnostics": [
+      "Compare a known-good request with the failing request.",
+      "Check whether failures started after a configuration deployment.",
+      "Inspect only non-sensitive log fields."
+    ],
+    "prevention": "Use managed secrets, least privilege, documented token rotation, and monitoring.",
+    "related": []
+  },
+  {
+    "slug": "jira-automation-not-triggering",
+    "software": "jira",
+    "title": "Jira Automation Is Not Triggering",
+    "problem": "A Jira automation rule does not execute when the expected event occurs.",
+    "symptoms": [
+      "No audit-log execution appears.",
+      "Issues change without the expected automation action.",
+      "Only some projects or issue types may be affected."
+    ],
+    "causes": [
+      "Trigger conditions not met.",
+      "Rule disabled.",
+      "Scope mismatch.",
+      "Permissions or actor restrictions.",
+      "Branch or condition logic prevents execution."
+    ],
+    "quickFix": [
+      "Open the automation audit log.",
+      "Confirm the rule is enabled.",
+      "Review the trigger event and conditions.",
+      "Check the rule scope and project association."
+    ],
+    "detailedFix": [
+      "Test the trigger with a controlled issue.",
+      "Inspect each condition in order.",
+      "Verify the rule actor has the required permissions.",
+      "Check branch rules and smart-value assumptions.",
+      "Review recent changes to the project workflow."
+    ],
+    "diagnostics": [
+      "Use audit logs to identify where execution stops.",
+      "Test conditions individually when possible.",
+      "Confirm the event actually fires for the relevant issue type."
+    ],
+    "prevention": "Keep automation rules small, documented, tested, and owned by a team.",
+    "related": []
+  },
+  {
+    "slug": "azure-403-error",
+    "software": "azure",
+    "title": "Azure 403 Forbidden Error",
+    "problem": "An Azure request reaches the service but is rejected because access is not permitted.",
+    "symptoms": [
+      "HTTP 403 response.",
+      "The resource is reachable but the operation is denied.",
+      "The issue can be resource-, identity-, or policy-specific."
+    ],
+    "causes": [
+      "Missing role assignment.",
+      "Resource policy restriction.",
+      "Network access restriction.",
+      "Wrong identity or subscription context.",
+      "Explicit deny or organizational policy."
+    ],
+    "quickFix": [
+      "Identify the exact Azure resource and operation.",
+      "Confirm the identity making the request.",
+      "Check role assignments and applicable resource policies.",
+      "Review network restrictions if relevant."
+    ],
+    "detailedFix": [
+      "Verify subscription and resource-group context.",
+      "Confirm the identity has the required least-privilege role.",
+      "Inspect resource-specific access settings.",
+      "Review Azure Policy or deny assignments when applicable.",
+      "Retest with a safe, read-only operation."
+    ],
+    "diagnostics": [
+      "Record the request ID and timestamp.",
+      "Compare access using an approved test identity.",
+      "Check whether other users or workloads are affected."
+    ],
+    "prevention": "Use least privilege, documented role ownership, and policy-aware deployment reviews.",
+    "related": [
+      "azure-401-error"
+    ]
+  },
+  {
+    "slug": "azure-401-error",
+    "software": "azure",
+    "title": "Azure 401 Unauthorized Error",
+    "problem": "An Azure API or service endpoint does not accept the supplied authentication credentials.",
+    "symptoms": [
+      "HTTP 401 response.",
+      "Token or credential may be expired, invalid, or issued for the wrong audience."
+    ],
+    "causes": [
+      "Expired token.",
+      "Wrong tenant or audience.",
+      "Invalid credential.",
+      "Incorrect authentication flow.",
+      "Clock or configuration issue."
+    ],
+    "quickFix": [
+      "Confirm the endpoint and tenant.",
+      "Acquire a fresh credential using the approved flow.",
+      "Check that the token audience matches the service.",
+      "Avoid copying secrets into tickets or chat."
+    ],
+    "detailedFix": [
+      "Inspect token metadata without exposing the token itself.",
+      "Verify application registration and permissions.",
+      "Confirm the requested scope/resource is correct.",
+      "Check service-specific authentication requirements."
+    ],
+    "diagnostics": [
+      "Compare token issuer and audience metadata.",
+      "Check timestamps and expiration.",
+      "Review identity-provider logs when available."
+    ],
+    "prevention": "Use managed identities or secure secret storage where supported and rotate credentials through approved processes.",
+    "related": [
+      "azure-403-error"
+    ]
+  },
+  {
+    "slug": "teams-microphone-not-working",
+    "software": "microsoft-teams",
+    "title": "Microsoft Teams Microphone Not Working",
+    "problem": "Teams cannot capture microphone audio during a meeting or call.",
+    "symptoms": [
+      "Other participants cannot hear the user.",
+      "Teams shows no microphone input.",
+      "Another application may still detect the microphone."
+    ],
+    "causes": [
+      "Wrong input device selected.",
+      "Operating-system privacy permission.",
+      "Muted hardware.",
+      "Driver or application issue.",
+      "Organizational policy."
+    ],
+    "quickFix": [
+      "Select the intended microphone in Teams settings.",
+      "Check operating-system microphone permissions.",
+      "Confirm the headset's hardware mute is off.",
+      "Test the microphone outside Teams."
+    ],
+    "detailedFix": [
+      "Restart Teams after permission changes.",
+      "Check device drivers and OS audio settings.",
+      "Try a different approved device.",
+      "If managed, ask the administrator to check device or policy restrictions."
+    ],
+    "diagnostics": [
+      "Determine whether the issue affects one device or multiple devices.",
+      "Check whether Teams receives any input level.",
+      "Test another meeting or supported audio application."
+    ],
+    "prevention": "Keep Teams and device drivers current and document managed-device policies.",
+    "related": []
+  },
+  {
+    "slug": "servicenow-workflow-not-running",
+    "software": "servicenow",
+    "title": "ServiceNow Workflow or Flow Is Not Running",
+    "problem": "An expected ServiceNow workflow or flow does not execute.",
+    "symptoms": [
+      "The triggering record changes but no flow action appears.",
+      "Execution history may show skipped or failed steps."
+    ],
+    "causes": [
+      "Trigger criteria not met.",
+      "Flow inactive.",
+      "Permissions or scope restrictions.",
+      "Action failure.",
+      "Data condition mismatch."
+    ],
+    "quickFix": [
+      "Check execution details and flow status.",
+      "Confirm trigger conditions against the actual record.",
+      "Review failed actions and input values.",
+      "Verify the flow is active."
+    ],
+    "detailedFix": [
+      "Use a controlled test record.",
+      "Inspect each condition and action.",
+      "Verify application scope and permissions.",
+      "Review system logs and execution details with appropriate administrator access."
+    ],
+    "diagnostics": [
+      "Identify the exact record and timestamp.",
+      "Compare a working record with a failing record.",
+      "Check whether a recent update changed field values or conditions."
+    ],
+    "prevention": "Use controlled deployments, versioned flows, and test cases for critical automation.",
+    "related": []
+  },
+  {
+    "slug": "aws-access-denied",
+    "software": "aws",
+    "title": "AWS AccessDenied Error",
+    "problem": "An AWS API request is rejected because the effective permissions do not allow the requested action.",
+    "symptoms": [
+      "AccessDenied response.",
+      "One role may fail while another succeeds.",
+      "The error can affect a specific resource or action."
+    ],
+    "causes": [
+      "Missing identity-policy permission.",
+      "Resource policy restriction.",
+      "Permissions boundary.",
+      "Service control policy.",
+      "Explicit deny."
+    ],
+    "quickFix": [
+      "Identify the exact API action and resource.",
+      "Confirm which role or identity made the request.",
+      "Review effective permissions and explicit denies.",
+      "Avoid granting broad administrator access as a first fix."
+    ],
+    "detailedFix": [
+      "Check identity policies and resource policies.",
+      "Inspect permissions boundaries and organization policies.",
+      "Verify the role trust relationship when assuming a role.",
+      "Retest with the minimum required permission."
+    ],
+    "diagnostics": [
+      "Use request IDs and CloudTrail when available.",
+      "Compare a known-good identity with the failing role.",
+      "Check whether the failure is action-specific."
+    ],
+    "prevention": "Use least privilege, policy reviews, and centralized identity governance.",
+    "related": []
+  }
+]

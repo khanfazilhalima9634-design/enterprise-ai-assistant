@@ -1,0 +1,216 @@
+[
+  {
+    "slug": "power-bi-create-dashboard",
+    "title": "How to Create a Power BI Dashboard",
+    "software": "power-bi",
+    "difficulty": "Beginner",
+    "time": "25 min",
+    "description": "Build a simple interactive Power BI dashboard from a structured dataset.",
+    "prerequisites": [
+      "Power BI Desktop",
+      "A sample Excel or CSV dataset"
+    ],
+    "permissions": "No special enterprise permissions are required for a local report.",
+    "steps": [
+      "Import your Excel or CSV data using Get Data.",
+      "Review data types and remove obvious data-quality issues in Power Query.",
+      "Create relationships between tables when a model contains multiple tables.",
+      "Add cards, charts, tables, and slicers to the report canvas.",
+      "Publish the report to the Power BI Service when you are ready to share it."
+    ],
+    "result": "A report page with interactive visuals, filters, and a clear KPI layout.",
+    "troubleshooting": "If visuals are blank, check data types, relationships, filters, and whether the source contains rows.",
+    "mistakes": [
+      "Using inconsistent date formats.",
+      "Creating duplicate relationships.",
+      "Adding too many visuals to one page."
+    ]
+  },
+  {
+    "slug": "power-bi-refresh-data",
+    "title": "How to Refresh Power BI Data",
+    "software": "power-bi",
+    "difficulty": "Beginner",
+    "time": "15 min",
+    "description": "Understand manual and scheduled refresh options for Power BI reports.",
+    "prerequisites": [
+      "A Power BI report connected to a data source"
+    ],
+    "permissions": "The required permissions depend on the workspace and data source.",
+    "steps": [
+      "Open the report or semantic model and identify its data source.",
+      "Refresh in Power BI Desktop to validate the query locally.",
+      "Publish the updated model if required.",
+      "In Power BI Service, configure credentials and refresh settings.",
+      "Run a manual refresh and review refresh history."
+    ],
+    "result": "The dataset reflects current source data and refresh history shows a successful run.",
+    "troubleshooting": "For failed service refreshes, inspect credentials, gateway connectivity, source availability, and query errors.",
+    "mistakes": [
+      "Assuming Desktop refresh guarantees Service refresh.",
+      "Ignoring gateway status.",
+      "Changing source paths without updating the model."
+    ]
+  },
+  {
+    "slug": "salesforce-create-dashboard",
+    "title": "How to Create a Salesforce Dashboard",
+    "software": "salesforce",
+    "difficulty": "Beginner",
+    "time": "30 min",
+    "description": "Create a dashboard from reports and arrange useful sales or service KPIs.",
+    "prerequisites": [
+      "Access to Salesforce reports and dashboards"
+    ],
+    "permissions": "Dashboard and report permissions vary by Salesforce edition and profile.",
+    "steps": [
+      "Open the Dashboards area and select New Dashboard.",
+      "Choose a folder where the dashboard can be stored.",
+      "Add components based on existing reports.",
+      "Configure chart types and grouping to match the KPI.",
+      "Save and test filters and dashboard visibility."
+    ],
+    "result": "A dashboard containing clear, role-appropriate business metrics.",
+    "troubleshooting": "If a component is empty, verify the source report, filters, sharing settings, and permissions.",
+    "mistakes": [
+      "Using overly broad filters.",
+      "Ignoring dashboard folder access.",
+      "Mixing incompatible report assumptions."
+    ]
+  },
+  {
+    "slug": "jira-create-workflow",
+    "title": "How to Create a Jira Workflow",
+    "software": "jira",
+    "difficulty": "Intermediate",
+    "time": "35 min",
+    "description": "Plan and configure a simple issue workflow for a project team.",
+    "prerequisites": [
+      "Jira project administration access where workflow changes are permitted"
+    ],
+    "permissions": "Workflow administration requires appropriate Jira permissions.",
+    "steps": [
+      "Map the desired statuses and transitions before editing Jira.",
+      "Open workflow administration and create or edit a workflow.",
+      "Add statuses and transitions that match the process.",
+      "Add conditions, validators, or post-functions only when necessary.",
+      "Publish or associate the workflow according to your Jira configuration."
+    ],
+    "result": "Issues can move through a predictable lifecycle with appropriate controls.",
+    "troubleshooting": "If a transition is missing, check workflow association, conditions, and project configuration.",
+    "mistakes": [
+      "Creating too many statuses.",
+      "Adding complex automation before validating the basic workflow.",
+      "Changing shared workflows without impact analysis."
+    ]
+  },
+  {
+    "slug": "azure-create-storage-account",
+    "title": "How to Create an Azure Storage Account",
+    "software": "azure",
+    "difficulty": "Beginner",
+    "time": "20 min",
+    "description": "Create a storage account and review the core configuration choices.",
+    "prerequisites": [
+      "An Azure subscription",
+      "Permission to create resources"
+    ],
+    "permissions": "The exact role required depends on the subscription and resource group policy.",
+    "steps": [
+      "Open the Azure portal and choose Create a resource.",
+      "Select Storage account and choose the subscription and resource group.",
+      "Configure region, performance, redundancy, and security settings.",
+      "Review networking and data-protection options.",
+      "Validate the configuration and create the resource."
+    ],
+    "result": "A storage account is available for approved storage workloads.",
+    "troubleshooting": "If deployment fails, inspect subscription limits, policy assignments, naming rules, and permissions.",
+    "mistakes": [
+      "Selecting redundancy without understanding cost and availability needs.",
+      "Ignoring organizational policies.",
+      "Sharing access keys unnecessarily."
+    ]
+  },
+  {
+    "slug": "snowflake-connect-power-bi",
+    "title": "How to Connect Snowflake to Power BI",
+    "software": "snowflake",
+    "difficulty": "Intermediate",
+    "time": "30 min",
+    "description": "Connect a Snowflake data source to Power BI and validate the connection.",
+    "prerequisites": [
+      "Snowflake account access",
+      "Power BI Desktop",
+      "Network access to the Snowflake environment"
+    ],
+    "permissions": "Snowflake privileges must allow the required database/schema access.",
+    "steps": [
+      "Confirm the Snowflake warehouse, database, and schema details.",
+      "In Power BI Desktop, choose the Snowflake connector.",
+      "Enter the server and warehouse information.",
+      "Authenticate using the approved enterprise method.",
+      "Select tables or use a query and validate a small sample before modeling."
+    ],
+    "result": "Power BI can retrieve approved Snowflake data for analysis.",
+    "troubleshooting": "Check network restrictions, credentials, warehouse availability, role privileges, and connector versions.",
+    "mistakes": [
+      "Using a role without required privileges.",
+      "Ignoring network policies.",
+      "Pulling an unnecessarily large dataset during testing."
+    ]
+  },
+  {
+    "slug": "teams-fix-microphone",
+    "title": "How to Fix Microsoft Teams Microphone Problems",
+    "software": "microsoft-teams",
+    "difficulty": "Beginner",
+    "time": "10 min",
+    "description": "Troubleshoot common Teams microphone issues on desktop systems.",
+    "prerequisites": [
+      "A supported Teams installation",
+      "A working microphone"
+    ],
+    "permissions": "Operating-system microphone permissions may be required.",
+    "steps": [
+      "Check the selected microphone in Teams settings.",
+      "Confirm the operating system allows Teams to access the microphone.",
+      "Test the microphone in another application.",
+      "Restart Teams after changing permissions or device selection.",
+      "If using a managed device, check organizational audio policies."
+    ],
+    "result": "Teams detects the intended microphone and meeting participants can hear audio.",
+    "troubleshooting": "If another application works but Teams does not, focus on Teams device selection, permissions, updates, and policy.",
+    "mistakes": [
+      "Changing many settings simultaneously.",
+      "Ignoring OS-level privacy permissions.",
+      "Testing with a muted hardware headset."
+    ]
+  },
+  {
+    "slug": "aws-create-iam-role",
+    "title": "How to Create an IAM Role in AWS",
+    "software": "aws",
+    "difficulty": "Intermediate",
+    "time": "25 min",
+    "description": "Create an AWS IAM role using least-privilege principles.",
+    "prerequisites": [
+      "AWS account access",
+      "A clear workload or service requirement"
+    ],
+    "permissions": "IAM administration permissions are required to create or modify roles.",
+    "steps": [
+      "Define the trusted entity that needs to assume the role.",
+      "Create a narrowly scoped permission policy.",
+      "Create the role and attach the approved policy.",
+      "Review the trust policy and permissions boundary if applicable.",
+      "Test access with a non-production workload before broader rollout."
+    ],
+    "result": "A role grants only the access required by the intended workload.",
+    "troubleshooting": "Access denied errors require checking identity policies, resource policies, trust relationships, boundaries, and explicit denies.",
+    "mistakes": [
+      "Using AdministratorAccess for convenience.",
+      "Ignoring trust policies.",
+      "Testing directly against production resources."
+    ]
+  }
+]

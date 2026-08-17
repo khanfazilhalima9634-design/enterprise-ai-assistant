@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "power-bi-vs-tableau",
+    "title": "Power BI vs Tableau",
+    "products": [
+      "Power BI",
+      "Tableau"
+    ],
+    "rows": [
+      [
+        "Ease of use",
+        "Strong Microsoft ecosystem integration",
+        "Strong visual analytics workflow"
+      ],
+      [
+        "Analytics",
+        "Broad business analytics and modeling",
+        "Strong visual exploration"
+      ],
+      [
+        "Integrations",
+        "Broad Microsoft and enterprise connectors",
+        "Broad data-source connectivity"
+      ],
+      [
+        "Enterprise support",
+        "Enterprise governance options",
+        "Enterprise governance options"
+      ],
+      [
+        "AI features",
+        "AI capabilities available across the platform",
+        "AI-assisted capabilities available across the platform"
+      ],
+      [
+        "Best for",
+        "Organizations already invested in Microsoft tooling",
+        "Teams focused heavily on visual analytics"
+      ]
+    ]
+  },
+  {
+    "slug": "aws-vs-azure",
+    "title": "AWS vs Azure",
+    "products": [
+      "AWS",
+      "Azure"
+    ],
+    "rows": [
+      [
+        "Cloud services",
+        "Broad infrastructure and platform portfolio",
+        "Broad infrastructure and Microsoft-integrated portfolio"
+      ],
+      [
+        "Identity",
+        "IAM ecosystem",
+        "Microsoft Entra and Azure identity ecosystem"
+      ],
+      [
+        "Enterprise integration",
+        "Strong cloud-native ecosystem",
+        "Strong Microsoft enterprise integration"
+      ],
+      [
+        "Best for",
+        "Broad cloud infrastructure choice",
+        "Organizations with Microsoft-heavy environments"
+      ]
+    ]
+  },
+  {
+    "slug": "salesforce-vs-hubspot",
+    "title": "Salesforce vs HubSpot",
+    "products": [
+      "Salesforce",
+      "HubSpot"
+    ],
+    "rows": [
+      [
+        "CRM",
+        "Highly configurable enterprise CRM",
+        "Integrated CRM and marketing platform"
+      ],
+      [
+        "Customization",
+        "Extensive enterprise customization",
+        "Simpler configuration for many teams"
+      ],
+      [
+        "Automation",
+        "Broad workflow and automation capabilities",
+        "Integrated marketing and sales automation"
+      ],
+      [
+        "Best for",
+        "Complex enterprise CRM requirements",
+        "Teams seeking an integrated customer platform"
+      ]
+    ]
+  },
+  {
+    "slug": "jira-vs-servicenow",
+    "title": "Jira vs ServiceNow",
+    "products": [
+      "Jira",
+      "ServiceNow"
+    ],
+    "rows": [
+      [
+        "Primary use",
+        "Software development and work management",
+        "IT service management and enterprise workflows"
+      ],
+      [
+        "Workflow",
+        "Highly configurable issue workflows",
+        "Broad enterprise workflow automation"
+      ],
+      [
+        "Best for",
+        "Development and agile teams",
+        "ITSM and enterprise service operations"
+      ]
+    ]
+  },
+  {
+    "slug": "snowflake-vs-databricks",
+    "title": "Snowflake vs Databricks",
+    "products": [
+      "Snowflake",
+      "Databricks"
+    ],
+    "rows": [
+      [
+        "Core strength",
+        "Cloud data platform and analytics",
+        "Data engineering, analytics, and AI platform"
+      ],
+      [
+        "Data engineering",
+        "Strong SQL and data platform workflows",
+        "Strong engineering and distributed data workflows"
+      ],
+      [
+        "AI/ML",
+        "Data platform capabilities for AI workloads",
+        "Strong integrated data and ML workflows"
+      ],
+      [
+        "Best for",
+        "Cloud analytics and governed data workloads",
+        "Engineering-heavy data and AI workloads"
+      ]
+    ]
+  }
+]

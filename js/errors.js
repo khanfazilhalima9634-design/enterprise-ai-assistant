@@ -1,0 +1,6 @@
+(async function(){
+ const data=await loadJSON('data/errors.json'); const list=document.getElementById('error-list'),q=document.getElementById('error-search'),sf=document.getElementById('error-software');
+ [...new Set(data.map(x=>x.software))].sort().forEach(x=>sf.insertAdjacentHTML('beforeend',`<option value="${escapeHtml(x)}">${escapeHtml(x==='general'?'General HTTP':x)}</option>`));
+ function render(){const query=(q.value||'').toLowerCase(),out=data.filter(x=>(!query||(x.code+' '+x.title+' '+x.meaning+' '+x.software).toLowerCase().includes(query))&&(!sf.value||x.software===sf.value));list.innerHTML=out.map(x=>`<article class="article-card"><div class="topline"><span class="difficulty">${escapeHtml(x.code)}</span><span class="tag">${escapeHtml(x.software)}</span></div><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.meaning)}</p><h4>Common causes</h4><ul>${x.causes.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><h4>Quick fix</h4><p>${escapeHtml(x.quickFix)}</p><details><summary>Detailed troubleshooting</summary><ul>${x.details.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><p><strong>Prevention:</strong> ${escapeHtml(x.prevention)}</p></details></article>`).join('')||'<div class="empty">No errors found.</div>'}
+ [q,sf].forEach(e=>e.addEventListener('input',render));render();
+})();
