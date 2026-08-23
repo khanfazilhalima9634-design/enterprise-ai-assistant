@@ -1,20 +1,20 @@
 (async function () {
   try {
-    // Load software FIRST
+    // Load software first
     const software = await loadJSON("data/software.json");
-const sel = document.getElementById("ts-software");
+    const sel = document.getElementById("ts-software");
 
-software.forEach(item => {
-  sel.insertAdjacentHTML(
-    "beforeend",
-    `<option value="${item.id}">${escapeHtml(item.name)}</option>`
-  );
-});
-
-// Troubleshooting database baad me load karo
-const data = await loadJSON("data/troubleshooting.json");
+    software.forEach(item => {
+      sel.insertAdjacentHTML(
+        "beforeend",
+        `<option value="${item.id}">${escapeHtml(item.name)}</option>`
+      );
     });
 
+    // Load troubleshooting data
+    const data = await loadJSON("data/troubleshooting.json");
+
+    // Pre-select software from URL
     const id = new URLSearchParams(location.search).get("software");
     if (id) sel.value = id;
 
@@ -85,7 +85,7 @@ const data = await loadJSON("data/troubleshooting.json");
         </div>`;
     });
 
-} catch (err) {
+  } catch (err) {
     console.error(err);
     alert("ERROR: " + err.message);
   }
