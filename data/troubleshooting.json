@@ -378,4 +378,41 @@
     "prevention": "Use least privilege, policy reviews, and centralized identity governance.",
     "related": []
   }
-]
+],
+{
+  "slug": "github-authentication-failed",
+  "software": "github-enterprise",
+  "title": "GitHub Enterprise Authentication Failed",
+  "problem": "GitHub Enterprise rejects authentication while cloning or pushing over HTTPS.",
+  "symptoms": [
+    "fatal: Authentication failed",
+    "remote: Permission denied (403)",
+    "Invalid username or password",
+    "Clone fails for a private repository"
+  ],
+  "causes": [
+    "Expired Personal Access Token (PAT)",
+    "Repository permission missing",
+    "Cached wrong credentials",
+    "SSO authorization required"
+  ],
+  "quickFix": [
+    "Generate a new Personal Access Token.",
+    "Enable the required repo scope.",
+    "Remove cached credentials from Keychain or Credential Manager.",
+    "Retry the clone with the new token."
+  ],
+  "detailedFix": [
+    "Open GitHub Enterprise → Settings → Developer Settings → Personal Access Tokens.",
+    "Create a new token with the required permissions.",
+    "Delete old cached Git credentials.",
+    "Run git clone again using HTTPS and the new token."
+  ],
+  "diagnostics": [
+    "Check whether the repository is private.",
+    "Verify organization access.",
+    "Confirm SSO authorization."
+  ],
+  "prevention": "Use managed Personal Access Tokens, rotate credentials, and avoid password authentication.",
+  "related": []
+}
