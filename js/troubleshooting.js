@@ -2,15 +2,17 @@
   try {
     // Load software FIRST
     const software = await loadJSON("data/software.json");
-    const data = await loadJSON("data/troubleshooting.json");
+const sel = document.getElementById("ts-software");
 
-    const sel = document.getElementById("ts-software");
+software.forEach(item => {
+  sel.insertAdjacentHTML(
+    "beforeend",
+    `<option value="${item.id}">${escapeHtml(item.name)}</option>`
+  );
+});
 
-    software.forEach(item => {
-      sel.insertAdjacentHTML(
-        "beforeend",
-        `<option value="${item.id}">${escapeHtml(item.name)}</option>`
-      );
+// Troubleshooting database baad me load karo
+const data = await loadJSON("data/troubleshooting.json");
     });
 
     const id = new URLSearchParams(location.search).get("software");
