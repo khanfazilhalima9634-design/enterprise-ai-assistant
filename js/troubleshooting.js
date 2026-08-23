@@ -3,7 +3,55 @@
  const sel=document.getElementById('ts-software'); software.forEach(x=>sel.insertAdjacentHTML('beforeend',`<option value="${x.id}">${escapeHtml(x.name)}</option>`));
  const id=new URLSearchParams(location.search).get('software'); if(id)sel.value=id;
  document.getElementById('diagnose-btn').addEventListener('click',()=>{
-  const error=document.getElementById('ts-error').value.trim().toLowerCase(), chosen=sel.value;
+ const error = document.getElementById('ts-error').value.trim().toLowerCase();
+const context = document.getElementById('ts-context').value.trim().toLowerCase();
+const chosen = sel.value;
+
+const text = `${error} ${context}`;
+
+let x = data.find(v => {
+  if (chosen && v.software !== chosen) return false;
+
+  const titleWords = v.title.toLowerCase().split(/\s+/);
+  const slugWords = v.slug.toLowerCase().split('-');
+
+  return (
+    titleWords.some(w => w.length > 3 && text.includes(w)) ||
+    slugWords.some(w => w.length > 3 && text.includes(w))
+  );
+});
+
+// GitHub authentication special case
+if (!x && chosen === "github-enterprise") {
+  if (
+    text.includes("authentication failed") ||
+    text.includes("invalid credentials") ||
+    text.includes("permission denied") ||
+    text.includes("403") ||
+    text.includes("personal access token") ||
+    text.includes("pat") ||
+    text.includes("clone")
+  ) {
+    x = data.find(v =>
+      v.software === "github-enterprise" &&
+      (
+        v.slug.includes("auth") ||
+        v.slug.includes("authentication") ||
+        v.slug.includes("clone")
+      )
+    );
+  }
+}
+
+// Generic fallback
+if (!x && chosen) x = data.find(v => v.software === chosen);
+
+if (!x) {
+  x =
+    data.find(v => text.includes("403") && v.slug.includes("403")) ||
+    data.find(v => text.includes("401") && v.slug.includes("401")) ||
+    data.find(v => text.includes("refresh") && v.slug.includes("refresh"));
+}
   let x=data.find(v=>(!chosen||v.software===chosen) && (error.includes(v.title.toLowerCase().split(' ')[0]) || error.includes(v.slug.split('-')[0]) || v.title.toLowerCase().split(' ').some(w=>w.length>4&&error.includes(w))));
   if(!x && chosen)x=data.find(v=>v.software===chosen);
   if(!x)x=data.find(v=>error.includes('403')&&v.slug.includes('403'))||data.find(v=>error.includes('401')&&v.slug.includes('401'))||data.find(v=>error.includes('refresh')&&v.slug.includes('refresh'));
