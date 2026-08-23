@@ -52,9 +52,7 @@ if (!x) {
     data.find(v => text.includes("401") && v.slug.includes("401")) ||
     data.find(v => text.includes("refresh") && v.slug.includes("refresh"));
 }
-  let x=data.find(v=>(!chosen||v.software===chosen) && (error.includes(v.title.toLowerCase().split(' ')[0]) || error.includes(v.slug.split('-')[0]) || v.title.toLowerCase().split(' ').some(w=>w.length>4&&error.includes(w))));
-  if(!x && chosen)x=data.find(v=>v.software===chosen);
-  if(!x)x=data.find(v=>error.includes('403')&&v.slug.includes('403'))||data.find(v=>error.includes('401')&&v.slug.includes('401'))||data.find(v=>error.includes('refresh')&&v.slug.includes('refresh'));
+  
   const box=document.getElementById('diagnosis');
   if(!x){box.innerHTML='<div class="result-content"><div class="alert"><strong>No confident match.</strong> The demo knowledge base does not contain a sufficiently close troubleshooting guide. Try the AI Assistant or search the Error Code database.</div></div>';return}
   box.innerHTML=`<div class="result-content"><div class="demo-banner"><strong>Demo diagnosis</strong><span>This response came from the local troubleshooting database, not a live AI model.</span></div><h2>${escapeHtml(x.title)}</h2><p>${escapeHtml(x.problem)}</p><h3>Symptoms</h3><ul>${x.symptoms.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><h3>Likely Causes</h3><ul>${x.causes.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><h3>Quick Fix</h3><ul>${x.quickFix.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><h3>Detailed Fix</h3><ol>${x.detailedFix.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ol><h3>Diagnostic Steps</h3><ul>${x.diagnostics.map(v=>`<li>${escapeHtml(v)}</li>`).join('')}</ul><h3>Prevention</h3><p>${escapeHtml(x.prevention)}</p></div>`;
