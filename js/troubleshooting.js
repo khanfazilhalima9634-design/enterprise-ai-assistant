@@ -83,8 +83,8 @@
         </div>`;
     });
 
-  } catch (err) {
+} catch (err) {
     console.error(err);
-    alert("Error loading data. Press F12 → Console.");
+    alert("ERROR: " + err.message);
   }
 })();
